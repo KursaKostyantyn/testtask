@@ -36,8 +36,7 @@ public class PersonControllerTest {
     @Test
 
     public void shouldGetPersonById() throws Exception {
-
-        mvc.perform(get("http://localhost:8080/persons/1")
+        mvc.perform(get("/persons/1")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content()
